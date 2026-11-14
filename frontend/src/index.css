@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap");
+@import "tailwindcss";
+
+:root {
+  --nexus-bg: #00010e;
+  --nexus-bg-elevated: #0b0e1f;
+  --nexus-panel: #111827;
+  --nexus-border: #1e293b;
+  --nexus-violet: #6a5af9;
+  --nexus-violet-deep: #2d2484;
+  --nexus-cyan: #00d4ff;
+  --nexus-text: #f5f6fb;
+  --nexus-text-muted: #94a3b8;
+  --nexus-gradient: linear-gradient(135deg, var(--nexus-violet) 0%, var(--nexus-cyan) 100%);
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-body: "Inter", Arial, sans-serif;
+}
+
+/* No `* { margin: 0; padding: 0 }` reset here: Tailwind's preflight already
+   resets these, and an unlayered reset would override every Tailwind
+   spacing utility (p-*, m-*, space-y-*) because it outranks layered CSS. */
+
+body {
+  font-family: var(--font-body);
+  background: var(--nexus-bg);
+  color: var(--nexus-text);
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+}
+
+.app-layout {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 280px;
+  border-right: 1px solid #ddd;
+  padding: 20px;
+}
+
+.main-content {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px;
+}
+
+.chat-window {
+  flex: 1;
+  overflow-y: auto;
+}
